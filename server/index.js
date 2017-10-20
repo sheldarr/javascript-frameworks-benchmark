@@ -43,14 +43,6 @@ class Server {
         application.get('/vue', function (request, respone) {
             respone.render('vue', { title: 'Vue.js implementation' });
         });
-
-        application.get('/examples/html', function (request, respone) {
-            respone.sendFile(path.normalize(`${__dirname}/../examples/html.html`));
-        });
-
-        application.get('/examples/html-css', function (request, respone) {
-            respone.sendFile(path.normalize(`${__dirname}/../examples/html-css.html`));
-        });
     }
 
     start() {

@@ -6,14 +6,14 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     entry: {
-        angular: './implementations/angular.js',
-        angular2: './implementations/angular2.js',
-        mithril: './implementations/mithril.js',
-        polyfills: './helpers/polyfills.js',
-        react: './implementations/react.js',
-        stats: './helpers/stats.js',
+        angular: './src/implementations/angular.js',
+        angular2: './src/implementations/angular2.js',
+        mithril: './src/implementations/mithril.js',
+        polyfills: './src/helpers/polyfills.js',
+        react: './src/implementations/react.js',
+        stats: './src/helpers/stats.js',
         vendor: ['moment', 'chance', 'stats.js'],
-        vue: './implementations/vue.js'
+        vue: './src/implementations/vue.js'
     },
     output: {
         path: path.resolve(__dirname, "public", "js"),

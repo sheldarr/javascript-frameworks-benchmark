@@ -17,6 +17,7 @@
     "@angular/platform-browser-dynamic": "4.3.3",
     "angular": "1.6.5",
     "awesome-typescript-loader": "^3.2.3",
+    "chalk": "^2.2.0",
     "chance": "^1.0.10",
     "es6-shim": "^0.35.3",
     "express": "^4.15.4",
@@ -31,6 +32,7 @@
     "rxjs": "^5.4.3",
     "stats.js": "^0.17.0",
     "vue": "2.4.2",
+    "winston": "^2.4.0",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {

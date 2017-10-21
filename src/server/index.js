@@ -1,5 +1,16 @@
+const chalk = require('chalk');
 const express = require('express')
 const path = require('path');
+const winston = require('winston');
+
+winston.configure({
+    transports: [
+        new winston.transports.Console({
+            colorize: true,
+            level: 'info'
+        })
+    ]
+});
 
 class Server {
     constructor () {
@@ -15,7 +26,7 @@ class Server {
     }
 
     setStaticContent(application) {
-        application.use('/public', express.static(path.normalize(`${__dirname}/../public`)));
+        application.use('/public', express.static(path.normalize(`${__dirname}/../../public`)));
     }
 
     setRoutes(application) {
@@ -49,8 +60,7 @@ class Server {
         const { PORT: port } = process.env;
 
         this.application.listen(port, () => {
-            /*eslint no-console: 0*/
-            console.log(`Server listening on port ${port}`);
+            winston.info(`Server listening on port ${port}`);
         })
     }
 }

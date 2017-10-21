@@ -1,4 +1,4 @@
-const Server = require('./server');
+const Server = require('./src/server');
 
 process.env.NODE_ENV = process.env.PORT || 'development';
 process.env.PORT = process.env.PORT || 8080;

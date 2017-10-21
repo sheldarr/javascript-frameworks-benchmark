@@ -6,8 +6,8 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     entry: {
+        angularjs: './src/implementations/angularjs.js',
         angular: './src/implementations/angular.js',
-        angular2: './src/implementations/angular2.js',
         mithril: './src/implementations/mithril.js',
         polyfills: './src/helpers/polyfills.js',
         react: './src/implementations/react.js',

@@ -34,12 +34,12 @@ class Server {
             respone.render('index', { title: 'JavaScript Frameworks Performance Benchamrk' });
         });
 
-        application.get('/angular', function (request, respone) {
-            respone.render('angular', { title: 'Angular implementation' });
+        application.get('/angularjs', function (request, respone) {
+            respone.render('angularjs', { title: 'AngularJS implementation' });
         });
 
-        application.get('/angular2', function (request, respone) {
-            respone.render('angular2', { title: 'Angular 2 implementation' });
+        application.get('/angular', function (request, respone) {
+            respone.render('angular', { title: 'Angular implementation' });
         });
 
         application.get('/mithril', function (request, respone) {
@@ -60,7 +60,7 @@ class Server {
         const { PORT: port } = process.env;
 
         this.application.listen(port, () => {
-            winston.info(`Server listening on port ${port}`);
+            winston.info(`${chalk.green('Server listening on port')} ${chalk.cyan(port)}`);
         })
     }
 }

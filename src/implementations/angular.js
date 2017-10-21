@@ -1,9 +1,9 @@
-import angular from 'angular';
+import 'es6-shim';
+import 'reflect-metadata';
+import 'zone.js';
 
-import PerformanceTest from './angular/performance-test.component';
-import VirtualMachinesTable from './angular/virtual-machines-table.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-const application = angular.module('application', []);
+import { PerformanceTestModule } from './angular/performance-test.module';
 
-application.component('performanceTest', PerformanceTest);
-application.component('virtualMachinesTable', VirtualMachinesTable);
+platformBrowserDynamic().bootstrapModule(PerformanceTestModule);

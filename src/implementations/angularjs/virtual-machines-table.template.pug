@@ -13,7 +13,7 @@ table
             th Uptime
     tbody
         tr(
-            *ngFor="let virtualMachine of virtualMachines"
+            ng-repeat="virtualMachine in $ctrl.virtualMachines"
         )
             td {{ virtualMachine.name }}
             td {{ virtualMachine.status }}

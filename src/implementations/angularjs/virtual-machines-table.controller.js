@@ -1,2 +1,1 @@
-export default class VirtualMachinesTableController {
-}
+export default class VirtualMachinesTableController {}

@@ -5,7 +5,8 @@
   "author": "Kewin Polok",
   "license": "MIT",
   "scripts": {
-    "start": "node ./index.js",
+    "start": "pm2 start index.js -n 'javascript-frameworks-benchmark'",
+    "stop": "pm2 stop index.js -n 'javascript-frameworks-benchmark'",
     "lint": "eslint {helpers/,implementations/}/**/*.js && tslint {helpers/,implementations/}/**/*.ts",
     "prepare": "./scripts/prepare.sh"
   },
@@ -24,6 +25,7 @@
     "milligram": "^1.3.0",
     "mithril": "1.1.3",
     "moment": "^2.18.1",
+    "pm2": "^2.7.2",
     "prop-types": "^15.6.0",
     "pug": "^2.0.0-rc.3",
     "react": "15.6.1",
